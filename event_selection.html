@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+        background-image: url('static/background1.jpg'); /* Replace 'background.jpg' with the path to your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      margin: 0;
+    }
+
+    .form-container {
+      border: 4px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    }
+    
+
+    h1, h2 {
+      color: purple;
+    }
+
+    .button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .column {
+      width: 50%;
+      padding: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>EVENT MANAGEMENT SYSTEM</h1>
+    
+
+    <button class="button" >
+        <a href={{url_for('login_authentication')}}>CREATE EVENT
+        </a>
+        </button>
+    <button class='button'><a href={{url_for('database_view')}}>VIEW EVENT
+    </a></button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DONATION LIST</title>
+    <style>
+        body {
+            background-image: url('static/background1.jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+          }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+        .form-container {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            height: 50%;
+            width:50%;
+            text-align: center;
+            background-image: url('static/background2.jpeg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          }
+
+          .button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          .column {
+            width: 50%;
+            padding: 10px;
+            display: inline-block;
+          }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+    <h1>AMOUNT DISPLAY</h1>
+    <table>
+        
+        <tr>
+            <th>DONATION AMOUNT</th>
+            <th>EXPENSE AMOUNT</th>
+            <th>AVAILABLE FUND</th>
+        </tr>
+        {% for row in range(0,3) %}
+           
+                <td>{{ data[row] }}</td>
+                
+            
+        {% endfor %}
+            
+        
+    </table>
+    <br>
+    <button class="button">
+        <a href={{url_for('home_page')}}>HOME
+        </a>
+    </button>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DONATION LIST</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+        .form-container {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-image: url('static/background2.jpeg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          }
+
+          .button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+    <h1>Donation Data</h1>
+    <table>
+        
+        <tr>
+            <th>RECEIPT NUMBER</th>
+            <th>RECEIPT DATE</th>
+            <th>NAME</th>
+            <th>AMOUNT</th>
+            <th>PAYMENT TYPE</th>
+            <th>STATUS</th>
+            <th>PAYMENT DATE</th>
+            
+        </tr>
+        {% for row in data[0] %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                
+            </tr>
+        {% endfor %}
+    </table>
+    
+</div>
+<br>
+<br>
+<div class="form-container">
+    <h1>EXPENSE LIST</h1>
+    <table>
+        
+        <tr>
+            <th>SR NO.</th>
+            <th>EXPENSE DATE</th>
+            <th>ITEM NAME</th>
+            <th>QTY.</th>
+            <th>EXPENSE TYPE</th>
+            <th>AMOUNT</th>
+            <th>BILL NUMBER</th>
+            
+        </tr>
+        {% for row in data[1] %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                
+            </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

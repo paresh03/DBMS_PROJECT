@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('static/background1.jpg'); /* Replace 'background.jpg' with the path to your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      background-image: url('static/background2.jpeg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1, h2 {
+      color: purple;
+    }
+
+    .button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .column {
+      width: 50%;
+      padding: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>EVENT MANAGEMENT SYSTEM</h1>
+    <h2>DONATION</h2>
+    <form action="/donation" method="POST">
+    <br>
+   <label >RECEIPT DATE:</label>
+   <input type="date" name="receipt_date">
+      
+
+<div class="row">
+  <div class="column">
+    <label >NAME:</label>
+    <input type="text" name="u_name">
+  </div>
+  <div class="column">
+   <label >amount:</label>
+   <input type="input" name="d_amount">
+  </div>
+</div>
+<div>
+  <div class="column">
+      <label >PAYMENT TYPE:</label>
+   <select name="payment_type" >
+   	<option value="none">---</option>
+    <option value="CASH">CASH</option>
+    <option value="UPI">UPI</option>
+  </select>
+  </div>
+  <div class="column">
+      <label for="status">STATUS:</label>
+   <select name="status" >
+   	<option value="none">---</option>
+    <option value="PAID">PAID</option>
+    <option value="BALANCE">BALANCE</option>
+  </select>
+  </div>
+</div>
+<div>
+  <label for="payment_date">PAYMENT DATE:</label>
+   <input type="date" name="payment_date">
+</div>
+<br>
+<button class="button" type="submit">SUBMIT</button>
+
+    </form>
+    <br>
+    <br>
+    <button class="button">
+      <a href={{url_for('home_page')}}>HOME
+      </a>
+  </button>
+  <button class="button">
+    <a href={{url_for('donation_section')}}>BACK
+    </a>
+</button>  
+  </div>
+</body>
+</html>

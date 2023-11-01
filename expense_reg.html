@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('static/background1.jpg'); /* Replace 'background.jpg' with the path to your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      background-image: url('static/background2.jpeg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1, h2 {
+      color: purple;
+    }
+
+    .button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .column {
+      width: 50%;
+      padding: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>EVENT MANAGEMENT SYSTEM</h1>
+    <h2>EXPENDITURE REGISTRATION</h2>
+    <form action="/expense" method="POST">
+        <br>
+   <label>DATE:</label>
+   <input type="date" name="expense_date">
+      
+
+<div class="row">
+  <div class="column">
+    <label>ITEM NAME:</label>
+    <input type="text" name="item_name">
+  </div>
+  <div class="column">
+   <label>QTY:</label>
+   <input type="input" name="item_qty">
+  </div>
+</div>
+<div>
+  <div class="column">
+    <label>AMOUNT:</label>
+   <input type="input" name="expense_amount">
+  </div>
+  <div class="column">
+      <label>EXPENSE TYPE:</label>
+   <select name="expense_type" >
+   	<option value="none">---</option>
+    <option value="maintenance_expense">maintenance</option>
+    <option value="pooja_expense">pooja</option>
+    <option value="decoration_expense">decoration</option>
+    <option value="cultural_expense">cultural</option>
+    <option value="procession_expense">procession</option>
+	<option value="other_expense">other</option>
+  </select>
+  </div>
+</div>
+<div>
+  <label>BILL NUMBER:</label>
+   <input type="input" name="bill_num">
+</div>
+<br>
+<button class="button" type="submit">SUBMIT</button>
+<br>
+<br>
+<button class="button">
+  <a href={{url_for('home_page')}}>HOME
+  </a>
+</button>
+<button class="button">
+<a href={{url_for('expense_section')}}>BACK
+</a>
+</button> 
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Excel File</title>
+    <style>
+h1,h2
+{
+text-align:center;color:purple
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:8px;
+  cursor: pointer;
+  background-color:#04AA6D;
+}
+.button:hover{
+    background-color:#4AA;
+}
+
+* {
+  box-sizing: border-box;
+ 
+}
+
+.column {
+  float: center;
+  width: 100%;
+  padding: 20px;
+}
+.form-container {
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-image: url('static/background2.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Download Excel File</h1>
+    <div class="column">
+        <button class=button ><a href={{url_for('convert_excel_donation')}}>Download Excel</a></button>
+    </div>
+    <div class="column">
+    <button class="button">
+      <a href={{url_for('home_page')}}>HOME
+      </a>
+  </button>  
+</div>
+</div> 
+</body>
+</html>
